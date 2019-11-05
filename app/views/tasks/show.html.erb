@@ -1,0 +1,16 @@
+<div class="container">
+  <h1><%= @task.title %></h1>
+  <div class="cards d-flex align-items-center">
+    <p id="details" class="rounded"><%= @task.details %></p>
+  </div>
+  <% if @task.completed == false %>
+    <p><i class="far fa-check-square"></i>This task is completed</p>
+  <% else %>
+    <p><i class="far fa-square"></i>This task ain't completed</p>
+  <% end %>
+
+  <div class="links">
+    <%= link_to "Update Task", edit_task_path %> <br>
+    <%= link_to "Go back",  tasks_path%>
+  </div>
+</div>
